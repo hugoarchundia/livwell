@@ -148,43 +148,35 @@ export default function Home() {
               level='LITE'
               title='LITE: Diagnóstico + Quick Wins'
               description='Evaluación inicial y plan de acción ágil para resultados tempranos.'
-              benefits={[
-                'Diagnóstico NOM-035 y NOM-030',
-                'Encuestas de clima y riesgos psicosociales',
-                'Quick wins en hábitos saludables'
-              ]}
+              benefits={[]}
               icon={<LeafIcon className='text-forest' />}
               ctaHref='#contacto'
-              ctaLabel='Solicitar propuesta'
+              ctaLabel='Agenda cotización'
             />
             <TierCard
               level='CORE'
               title='CORE: Cultura y Cumplimiento'
               description='Programa integral de cultura, liderazgo y cumplimiento ISO 45001/45003.'
-              benefits={[
-                'Gestión de riesgos y ergonomía (NOM-036-1)',
-                'Capacitación a líderes y protocolos',
-                'Plan anual de bienestar con OKRs'
-              ]}
+              benefits={[]}
               icon={<CircleIcon className='text-sap' />}
               featured
               ctaHref='#contacto'
-              ctaLabel='Agenda diagnóstico'
+              ctaLabel='Agenda cotización'
             />
             <TierCard
               level='PLUS'
               title='PLUS: Salud Integral y Certificación'
               description='Intervenciones clínicas y certificaciones de bienestar corporativo.'
-              benefits={[
-                'Psicología, nutrición, ergonomía y ejercicio',
-                'Biomarcadores y tamizajes preventivos',
-                'Acompañamiento para certificaciones'
-              ]}
+              benefits={[]}
               icon={<CheckLeafIcon className='text-sage' />}
               ctaHref='#contacto'
-              ctaLabel='Solicitar demo'
+              ctaLabel='Agenda cotización'
             />
           </div>
+          <p className='pt-3 text-center text-[11px] text-slate/70 sm:text-left'>
+            Personalizada conforme a objetivo, tamaño y presupuesto de tu
+            empresa.
+          </p>
         </Section>
 
         {/* Sectores */}

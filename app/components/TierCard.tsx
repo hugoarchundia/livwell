@@ -26,7 +26,9 @@ export function TierCard({
     level === 'PLUS' ? 'bg-sap' : level === 'CORE' ? 'bg-forest' : 'bg-sage'
   const ring = featured ? 'ring-2 ring-sap' : ''
   return (
-    <div className={`group relative rounded-2xl border border-sand bg-white/70 shadow-sm backdrop-blur-sm transition hover:shadow-md ${ring}`}>
+    <div
+      className={`group relative rounded-2xl border border-sand bg-white/70 shadow-sm backdrop-blur-sm transition hover:shadow-md ${ring}`}
+    >
       <div
         className={`absolute -top-3 left-4 h-6 w-6 rounded-full ${accent}`}
       ></div>
@@ -48,12 +50,14 @@ export function TierCard({
           ))}
         </ul>
         {ctaHref && ctaLabel && (
-          <Link
-            href={ctaHref}
-            className='mt-5 inline-flex items-center rounded-full border border-sage/50 px-4 py-2 text-xs font-semibold text-forest hover:bg-sand/60'
-          >
-            {ctaLabel}
-          </Link>
+          <div className='mt-5'>
+            <Link
+              href={ctaHref}
+              className='inline-flex items-center rounded-full border border-sage/50 px-4 py-2 text-xs font-semibold text-forest hover:bg-sand/60'
+            >
+              {ctaLabel}
+            </Link>
+          </div>
         )}
       </div>
     </div>

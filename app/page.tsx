@@ -88,9 +88,9 @@ export default function Home() {
               hint='NOM-035/036/037'
             />
             <Stat
-              label='Retorno/Valor (ROI/VOI)'
+              label='Retorno/Valor'
               value=''
-              hint='Core/Plus; salud y productividad'
+              hint='Salud y productividad'
             />
           </div>
         </section>

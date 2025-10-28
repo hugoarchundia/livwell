@@ -146,8 +146,8 @@ export default function Home() {
           <div className='grid gap-6 sm:grid-cols-3'>
             <TierCard
               level='LITE'
-              title='LITE: Diagnóstico + Quick Wins'
-              description='Evaluación inicial y plan de acción ágil para resultados tempranos.'
+              title='LITE'
+              description=''
               benefits={[]}
               icon={<LeafIcon className='text-forest' />}
               ctaHref='#contacto'
@@ -155,8 +155,8 @@ export default function Home() {
             />
             <TierCard
               level='CORE'
-              title='CORE: Cultura y Cumplimiento'
-              description='Programa integral de cultura, liderazgo y cumplimiento ISO 45001/45003.'
+              title='CORE'
+              description=''
               benefits={[]}
               icon={<CircleIcon className='text-sap' />}
               featured
@@ -165,8 +165,8 @@ export default function Home() {
             />
             <TierCard
               level='PLUS'
-              title='PLUS: Salud Integral y Certificación'
-              description='Intervenciones clínicas y certificaciones de bienestar corporativo.'
+              title='PLUS'
+              description=''
               benefits={[]}
               icon={<CheckLeafIcon className='text-sage' />}
               ctaHref='#contacto'

@@ -33,9 +33,9 @@ export function TierCard({
         className={`absolute -top-3 left-4 h-6 w-6 rounded-full ${accent}`}
       ></div>
       <div className='p-6'>
-        <div className='flex items-center gap-3'>
+        <div className='flex items-center justify-center gap-3'>
           {icon}
-          <h3 className='text-lg font-bold text-slate'>{title}</h3>
+          <h3 className='text-xl font-bold text-slate'>{title}</h3>
         </div>
         <p className='mt-2 text-sm text-slate/80'>{description}</p>
         <ul className='mt-4 space-y-2'>
@@ -50,7 +50,7 @@ export function TierCard({
           ))}
         </ul>
         {ctaHref && ctaLabel && (
-          <div className='mt-5'>
+          <div className='mt-5 flex justify-center'>
             <Link
               href={ctaHref}
               className='inline-flex items-center rounded-full border border-sage/50 px-4 py-2 text-xs font-semibold text-forest hover:bg-sand/60'

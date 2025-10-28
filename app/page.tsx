@@ -41,7 +41,7 @@ export default function Home() {
               <h1 className='text-4xl font-extrabold leading-tight text-slate sm:text-5xl'>
                 Bienestar para tu gente, poder para tu empresa.
               </h1>
-              <p className='text-lg text-slate/80'>
+              <p className='text-base text-slate/80 sm:text-lg'>
                 Consultoría integral en salud ocupacional, bienestar mental y
                 cultura organizacional.
               </p>
@@ -62,7 +62,7 @@ export default function Home() {
             </div>
             <div className='relative'>
               <div className='absolute inset-0 -z-10 rounded-3xl bg-white/40 backdrop-blur-md ring-1 ring-sand/70' />
-              <div className='grid grid-cols-2 gap-4 p-6'>
+              <div className='grid grid-cols-2 gap-4 p-4 sm:p-6'>
                 <div className='aspect-4/3 rounded-2xl bg-sand/70' />
                 <div className='aspect-4/3 rounded-2xl bg-sage/60' />
                 <div className='aspect-4/3 rounded-2xl bg-forest/20' />
@@ -109,17 +109,19 @@ export default function Home() {
             <div>
               <h3 className='text-base font-semibold text-slate'>Misión</h3>
               <p className='mt-2 text-sm text-slate/80'>
-                Impulsar culturas saludables y sostenibles mediante
-                intervenciones basadas en evidencia y cumplimiento normativo.
+                Diseñar e implementar soluciones de bienestar físico, mental,
+                social y espiritual, alineadas a la normativa mexicana y mejores
+                prácticas internacionales, que mejoren la salud, la retención de
+                talento y la productividad.
               </p>
             </div>
             <div>
               <h3 className='text-base font-semibold text-slate'>
-                Visión 2030
+                Visión (2030)
               </h3>
               <p className='mt-2 text-sm text-slate/80'>
-                Ser referente en Latinoamérica en bienestar organizacional,
-                vinculando ROI/VOI con salud integral.
+                Ser referente en México y LATAM en programas integrales de
+                bienestar con resultados clínicos y de negocio demostrables.
               </p>
             </div>
             <div>
@@ -222,7 +224,7 @@ export default function Home() {
           title='Modelo LIV: Diagnóstico • Intervención • Medición continua'
           subtitle='Combinamos ciencia médica, psicología organizacional y analítica de datos para lograr resultados reales.'
         >
-          <ol className='flex w-full items-stretch justify-between gap-6'>
+          <ol className='flex w-full flex-col items-stretch justify-between gap-6 sm:flex-row'>
             {[
               {
                 num: '1',
@@ -255,7 +257,12 @@ export default function Home() {
                   </div>
                   <div className='text-sm text-slate/80'>{text}</div>
                 </div>
-                {i < arr.length - 1 && <div className='h-px flex-1 bg-sand' />}
+                {i < arr.length - 1 && (
+                  <>
+                    <div className='hidden h-px flex-1 bg-sand sm:block' />
+                    <div className='block w-px self-stretch bg-sand sm:hidden' />
+                  </>
+                )}
               </li>
             ))}
           </ol>

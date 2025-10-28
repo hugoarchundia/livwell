@@ -141,7 +141,7 @@ export default function Home() {
           id='servicios'
           overline='Servicios'
           title='Tres niveles para necesidades reales'
-          subtitle='Iconografía minimalista y beneficios claros: cumplimiento legal, hábitos saludables, clima laboral y liderazgo sostenible.'
+          subtitle='Cumplimiento legal, hábitos saludables, clima laboral y liderazgo sostenible.'
         >
           <div className='grid gap-6 sm:grid-cols-3'>
             <TierCard

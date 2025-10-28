@@ -6,6 +6,7 @@ import {
   CardTitle
 } from '@/components/ui/card'
 // import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { InstagramLogoIcon } from '@radix-ui/react-icons'
 import { CTAButton } from './components/CTAButton'
 import {
   ArrowDownIcon,
@@ -454,6 +455,34 @@ export default function Home() {
           title='Salud integral con enfoque multidisciplinario'
           subtitle='Medicina preventiva, nutrición, psicología, ergonomía, psiquiatría y ejercicio.'
         />
+
+        {/* Redes sociales */}
+        <Section
+          id='social'
+          overline='Redes sociales'
+          title='Síguenos'
+          subtitle='Conecta con nuestras novedades y contenido de bienestar.'
+        >
+          <div className='grid gap-6 sm:grid-cols-3'>
+            <a
+              href='https://instagram.com/livwell.care'
+              target='_blank'
+              rel='noopener noreferrer'
+              aria-label='Instagram @livwell.care'
+              className='rounded-xl border border-sand bg-white/70 p-5 transition-colors hover:bg-white'
+            >
+              <div className='flex items-center gap-3'>
+                <span className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-sand/70 text-forest'>
+                  <InstagramLogoIcon className='h-4 w-4' />
+                </span>
+                <div className='flex flex-col'>
+                  <span className='font-semibold text-slate'>Instagram</span>
+                  <span className='text-sm text-slate/80'>@livwell.care</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </Section>
 
         {/* Contacto / Demo */}
         <Section

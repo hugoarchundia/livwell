@@ -6,11 +6,11 @@ export function Footer() {
           <div className='text-xs text-slate/70'>
             © {new Date().getFullYear()} LIV Soluciones en Salud, S.A. de C.V.
           </div>
-          <div className='text-[11px] text-slate/70'>NOM-035 • NOM-036-1 • NOM-030 • ISO 45001/45003</div>
+          <div className='text-[11px] text-slate/70'>
+            NOM-035/036/037 y certificaciones internacionales de calidad
+          </div>
         </div>
       </div>
     </footer>
   )
 }
-
-

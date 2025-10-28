@@ -38,9 +38,9 @@ export default function Home() {
         </div>
 
         {/* Hero split with gradient orb */}
-        <section className='relative isolate overflow-hidden'>
-          <div className='mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-16 sm:grid-cols-2 sm:px-10 sm:py-24'>
-            <div className='flex flex-col gap-4'>
+        <section className='relative isolate w-full overflow-hidden'>
+          <div className='mx-auto grid max-w-6xl w-full grid-cols-1 gap-10 px-6 py-16 sm:grid-cols-2 sm:px-10 sm:py-24'>
+            <div className='flex flex-col gap-4 w-full sm:col-span-2'>
               <p className='text-xs font-semibold tracking-widest text-sap uppercase'>
                 Lidera • Inspira • Valora
               </p>
@@ -64,15 +64,6 @@ export default function Home() {
                 >
                   Conoce nuestra metodología
                 </CTAButton>
-              </div>
-            </div>
-            <div className='relative'>
-              <div className='absolute inset-0 -z-10 rounded-3xl bg-white/40 backdrop-blur-md ring-1 ring-sand/70' />
-              <div className='grid grid-cols-2 gap-4 p-4 sm:p-6'>
-                <div className='aspect-4/3 rounded-2xl bg-sand/70' />
-                <div className='aspect-4/3 rounded-2xl bg-sage/60' />
-                <div className='aspect-4/3 rounded-2xl bg-forest/20' />
-                <div className='aspect-4/3 rounded-2xl bg-sap/20' />
               </div>
             </div>
           </div>
@@ -273,7 +264,7 @@ export default function Home() {
           title='El bienestar como dato estratégico'
           subtitle='Medimos ROI, ausentismo, presentismo, rotación, siniestralidad y primas IMSS, clima laboral y biomarcadores para decisiones informadas.'
         >
-          <div className='grid gap-6 sm:grid-cols-[1.25fr_1fr]'>
+          <div className='grid items-stretch gap-6 sm:grid-cols-[1.25fr_1fr]'>
             <Card>
               <CardHeader>
                 <CardTitle>Vista general (demo)</CardTitle>
@@ -351,13 +342,13 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
-            <Card>
-              <CardHeader>
+            <Card className='h-full'>
+              <CardHeader className='items-center text-center'>
                 <CardTitle>Insights</CardTitle>
                 <CardDescription>ROI, cohortes y cumplimiento</CardDescription>
               </CardHeader>
-              <CardContent>
-                <div className='flex flex-col gap-3'>
+              <CardContent className='flex h-full flex-col items-center justify-center gap-3'>
+                <div className='grid w-full grid-cols-1 gap-3'>
                   <div className='flex items-center gap-3 rounded-xl border border-sand bg-white/70 p-4'>
                     <span className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-sage/60 text-forest'>
                       <CheckLeafIcon />
@@ -393,13 +384,26 @@ export default function Home() {
                         Cumplimiento y calidad
                       </span>
                       <span className='text-xs text-slate/70'>
-                        NOM, certificaciones y marco legal vigente
+                        NOM-035/036/037, ISO 45001/45003
                       </span>
                     </div>
                   </div>
-                  <div className='flex pt-2'>
-                    <CTAButton href='#contacto'>Ver demo de tableros</CTAButton>
+                  <div className='flex items-center gap-3 rounded-xl border border-sand bg-white/70 p-4'>
+                    <span className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-sage/60 text-forest'>
+                      <CheckLeafIcon />
+                    </span>
+                    <div className='flex flex-col'>
+                      <span className='text-sm font-semibold text-slate'>
+                        Privacidad y ética
+                      </span>
+                      <span className='text-xs text-slate/70'>
+                        Confidencialidad y lineamientos
+                      </span>
+                    </div>
                   </div>
+                </div>
+                <div className='mt-2 flex justify-center'>
+                  <CTAButton href='#contacto'>Ver demo de tableros</CTAButton>
                 </div>
               </CardContent>
             </Card>
@@ -459,39 +463,92 @@ export default function Home() {
         >
           <div className='grid gap-6 sm:grid-cols-[1fr_1.2fr]'>
             <div className='rounded-2xl border border-sand bg-white/70 p-6'>
-              <h4 className='text-lg font-semibold text-slate'>Hablemos</h4>
-              <p className='mt-2 text-sm text-slate/80'>
-                Conoce cómo medir y elevar el bienestar en tu organización.
-              </p>
-              <div className='mt-5 flex flex-wrap items-center gap-3'>
-                <CTAButton href='mailto:contacto.livwell@gmail.com'>
-                  Solicitar reunión
-                </CTAButton>
-                <CTAButton
-                  href='#resultados'
-                  variant='secondary'
-                >
-                  Ver tableros
-                </CTAButton>
+              <div className='flex flex-col gap-4'>
+                <h4 className='text-lg font-semibold text-slate'>Hablemos</h4>
+                <p className='text-sm text-slate/80'>
+                  Conoce cómo medir y elevar el bienestar en tu organización.
+                </p>
+                <div className='flex flex-wrap items-center gap-2'>
+                  <span className='inline-flex items-center rounded-full bg-sand/70 px-2 py-1 text-[11px] font-semibold text-slate'>
+                    Diagnóstico breve
+                  </span>
+                  <span className='inline-flex items-center rounded-full bg-sand/70 px-2 py-1 text-[11px] font-semibold text-slate'>
+                    Sin compromiso
+                  </span>
+                  <span className='inline-flex items-center rounded-full bg-sand/70 px-2 py-1 text-[11px] font-semibold text-slate'>
+                    30–45 min
+                  </span>
+                </div>
+                <div className='flex flex-wrap items-center gap-3'>
+                  <CTAButton href='mailto:contacto.livwell@gmail.com'>
+                    Solicitar reunión
+                  </CTAButton>
+                  <CTAButton
+                    href='#resultados'
+                    variant='secondary'
+                  >
+                    Ver tableros
+                  </CTAButton>
+                </div>
+                <p className='text-[11px] text-slate/60'>
+                  Protegemos la confidencialidad de tu información.
+                </p>
               </div>
             </div>
             <div className='rounded-2xl border border-sand bg-white/70 p-6'>
-              <div className='grid grid-cols-2 gap-4 text-sm text-slate/80'>
-                <div>
-                  <div className='font-semibold text-slate'>Cumplimiento</div>
-                  <p>NOM-035, NOM-036-1, NOM-030, ISO 45001/45003</p>
+              <div className='grid grid-cols-2 gap-4'>
+                <div className='flex items-start gap-3 rounded-xl bg-sand/40 p-3'>
+                  <span className='inline-flex h-6 w-6 items-center justify-center rounded-full bg-sap/20 text-forest'>
+                    <CircleIcon />
+                  </span>
+                  <div className='flex flex-col'>
+                    <span className='text-sm font-semibold text-slate'>
+                      Cumplimiento
+                    </span>
+                    <span className='text-xs text-slate/70'>
+                      NOM-035/036/037 y certificaciones internacionales de
+                      calidad
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <div className='font-semibold text-slate'>Especialidades</div>
-                  <p>Medicina, psicología, ergonomía, nutrición y ejercicio</p>
+                <div className='flex items-start gap-3 rounded-xl bg-sand/40 p-3'>
+                  <span className='inline-flex h-6 w-6 items-center justify-center rounded-full bg-sap/20 text-forest'>
+                    <CircleIcon />
+                  </span>
+                  <div className='flex flex-col'>
+                    <span className='text-sm font-semibold text-slate'>
+                      Especialistas
+                    </span>
+                    <span className='text-xs text-slate/70'>
+                      Medicina, psicología, ergonomía, nutrición y ejercicio
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <div className='font-semibold text-slate'>Tecnología</div>
-                  <p>Software, analítica y contenidos con aval científico</p>
+                <div className='flex items-start gap-3 rounded-xl bg-sand/40 p-3'>
+                  <span className='inline-flex h-6 w-6 items-center justify-center rounded-full bg-sap/20 text-forest'>
+                    <CircleIcon />
+                  </span>
+                  <div className='flex flex-col'>
+                    <span className='text-sm font-semibold text-slate'>
+                      Tecnología
+                    </span>
+                    <span className='text-xs text-slate/70'>
+                      Software, analítica y contenidos con aval científico
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <div className='font-semibold text-slate'>Cobertura</div>
-                  <p>México y LATAM</p>
+                <div className='flex items-start gap-3 rounded-xl bg-sand/40 p-3'>
+                  <span className='inline-flex h-6 w-6 items-center justify-center rounded-full bg-sap/20 text-forest'>
+                    <CircleIcon />
+                  </span>
+                  <div className='flex flex-col'>
+                    <span className='text-sm font-semibold text-slate'>
+                      Cobertura
+                    </span>
+                    <span className='text-xs text-slate/70'>
+                      México y LATAM
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

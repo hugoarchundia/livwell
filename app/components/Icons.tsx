@@ -78,3 +78,55 @@ export function CircleIcon({ size = 20, ...props }: IconProps) {
     </svg>
   )
 }
+
+export function ArrowDownIcon({ size = 16, ...props }: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox='0 0 24 24'
+      fill='none'
+      {...props}
+    >
+      <path
+        d='M12 4v12'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+      <path
+        d='M7 12l5 6 5-6'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </svg>
+  )
+}
+
+export function ArrowUpIcon({ size = 16, ...props }: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox='0 0 24 24'
+      fill='none'
+      {...props}
+    >
+      <path
+        d='M12 20V8'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+      <path
+        d='M17 12l-5-6-5 6'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </svg>
+  )
+}

@@ -5,9 +5,15 @@ import {
   CardHeader,
   CardTitle
 } from '@/components/ui/card'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { CTAButton } from './components/CTAButton'
-import { CheckLeafIcon, CircleIcon, LeafIcon } from './components/Icons'
+import {
+  ArrowDownIcon,
+  ArrowUpIcon,
+  CheckLeafIcon,
+  CircleIcon,
+  LeafIcon
+} from './components/Icons'
 import { Section } from './components/Section'
 import { Stat } from './components/Stat'
 import { TierCard } from './components/TierCard'
@@ -221,17 +227,17 @@ export default function Home() {
               {
                 num: '1',
                 title: 'Diagnóstico',
-                text: 'Evaluaciones NOM-035/036-1/030, clima y data de salud.'
+                text: 'Evaluaciones NOM-035/036/037, cuestionarios de bienestar general, estrés, depresión, ansiedad, nutrición y compromiso laboral.'
               },
               {
                 num: '2',
                 title: 'Intervención',
-                text: 'Programas basados en evidencia, liderazgo y hábitos.'
+                text: 'Programas basados en evidencia científica, liderazgo y hábitos saludables personalizados a las necesidades de tus colaboradores.'
               },
               {
                 num: '3',
                 title: 'Medición',
-                text: 'Seguimiento continuo con tableros e indicadores.'
+                text: 'Seguimiento continuo y evaluación de indicadores de éxito'
               }
             ].map(({ num, title, text }, i, arr) => (
               <li
@@ -265,7 +271,7 @@ export default function Home() {
           id='resultados'
           overline='Resultados y tableros'
           title='El bienestar como dato estratégico'
-          subtitle='Medimos ROI/VOI, ausentismo, clima laboral y biomarcadores para decisiones informadas.'
+          subtitle='Medimos ROI, ausentismo, presentismo, rotación, siniestralidad y primas IMSS, clima laboral y biomarcadores para decisiones informadas.'
         >
           <div className='grid gap-6 sm:grid-cols-[1.25fr_1fr]'>
             <Card>
@@ -276,44 +282,124 @@ export default function Home() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Tabs defaultValue='ausentismo'>
-                  <TabsList>
-                    <TabsTrigger value='ausentismo'>Ausentismo</TabsTrigger>
-                    <TabsTrigger value='clima'>Clima</TabsTrigger>
-                    <TabsTrigger value='biomarcadores'>
-                      Biomarcadores
-                    </TabsTrigger>
-                  </TabsList>
-                  <TabsContent value='ausentismo'>
-                    <div className='h-56 w-full rounded-xl bg-linear-to-tr from-sage/50 via-sand/60 to-forest/20' />
-                  </TabsContent>
-                  <TabsContent value='clima'>
-                    <div className='h-56 w-full rounded-xl bg-linear-to-tr from-sap/40 via-sand/60 to-sage/30' />
-                  </TabsContent>
-                  <TabsContent value='biomarcadores'>
-                    <div className='h-56 w-full rounded-xl bg-linear-to-tr from-forest/20 via-sage/40 to-sand/50' />
-                  </TabsContent>
-                </Tabs>
+                <div className='grid grid-cols-1 gap-3 sm:grid-cols-2'>
+                  <div className='flex items-center gap-3 rounded-xl border border-sand bg-white/70 p-4'>
+                    <span className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-sand/70 text-forest'>
+                      <ArrowDownIcon />
+                    </span>
+                    <div className='flex flex-col'>
+                      <span className='text-sm font-semibold text-slate'>
+                        Ausentismo
+                      </span>
+                      <span className='text-xs text-slate/70'>
+                        Días perdidos y costo
+                      </span>
+                    </div>
+                  </div>
+                  <div className='flex items-center gap-3 rounded-xl border border-sand bg-white/70 p-4'>
+                    <span className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-sand/70 text-forest'>
+                      <ArrowDownIcon />
+                    </span>
+                    <div className='flex flex-col'>
+                      <span className='text-sm font-semibold text-slate'>
+                        Presentismo
+                      </span>
+                      <span className='text-xs text-slate/70'>
+                        Baja productividad por salud
+                      </span>
+                    </div>
+                  </div>
+                  <div className='flex items-center gap-3 rounded-xl border border-sand bg-white/70 p-4'>
+                    <span className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-sand/70 text-forest'>
+                      <ArrowDownIcon />
+                    </span>
+                    <div className='flex flex-col'>
+                      <span className='text-sm font-semibold text-slate'>
+                        Rotación
+                      </span>
+                      <span className='text-xs text-slate/70'>
+                        Retención y compromiso
+                      </span>
+                    </div>
+                  </div>
+                  <div className='flex items-center gap-3 rounded-xl border border-sand bg-white/70 p-4'>
+                    <span className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-sand/70 text-forest'>
+                      <ArrowDownIcon />
+                    </span>
+                    <div className='flex flex-col'>
+                      <span className='text-sm font-semibold text-slate'>
+                        Siniestralidad y primas IMSS
+                      </span>
+                      <span className='text-xs text-slate/70'>
+                        Costos asociados
+                      </span>
+                    </div>
+                  </div>
+                  <div className='flex items-center gap-3 rounded-xl border border-sand bg-white/70 p-4 sm:col-span-2'>
+                    <span className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-sage/60 text-forest'>
+                      <ArrowUpIcon />
+                    </span>
+                    <div className='flex flex-col'>
+                      <span className='text-sm font-semibold text-slate'>
+                        Productividad Percibida
+                      </span>
+                      <span className='text-xs text-slate/70'>
+                        Encuestas y tableros
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
                 <CardTitle>Insights</CardTitle>
-                <CardDescription>
-                  ROI/VOI, cohortes y cumplimiento
-                </CardDescription>
+                <CardDescription>ROI, cohortes y cumplimiento</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className='space-y-2 text-sm text-slate/90'>
-                  <li>• ROI/VOI asociado a iniciativas y cohortes.</li>
-                  <li>• Comparativas por unidad, turno y líderes.</li>
-                  <li>
-                    • Indicadores alineados a NOM-035/036-1/030 e ISO
-                    45001/45003.
-                  </li>
-                </ul>
-                <div className='flex pt-4'>
-                  <CTAButton href='#contacto'>Ver demo de tableros</CTAButton>
+                <div className='flex flex-col gap-3'>
+                  <div className='flex items-center gap-3 rounded-xl border border-sand bg-white/70 p-4'>
+                    <span className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-sage/60 text-forest'>
+                      <CheckLeafIcon />
+                    </span>
+                    <div className='flex flex-col'>
+                      <span className='text-sm font-semibold text-slate'>
+                        ROI/VOI asociado
+                      </span>
+                      <span className='text-xs text-slate/70'>
+                        Por iniciativa y cohorte
+                      </span>
+                    </div>
+                  </div>
+                  <div className='flex items-center gap-3 rounded-xl border border-sand bg-white/70 p-4'>
+                    <span className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-sage/60 text-forest'>
+                      <CheckLeafIcon />
+                    </span>
+                    <div className='flex flex-col'>
+                      <span className='text-sm font-semibold text-slate'>
+                        Comparativas avanzadas
+                      </span>
+                      <span className='text-xs text-slate/70'>
+                        Por unidad, turno y líderes
+                      </span>
+                    </div>
+                  </div>
+                  <div className='flex items-center gap-3 rounded-xl border border-sand bg-white/70 p-4'>
+                    <span className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-sage/60 text-forest'>
+                      <CheckLeafIcon />
+                    </span>
+                    <div className='flex flex-col'>
+                      <span className='text-sm font-semibold text-slate'>
+                        Cumplimiento y calidad
+                      </span>
+                      <span className='text-xs text-slate/70'>
+                        NOM, certificaciones y marco legal vigente
+                      </span>
+                    </div>
+                  </div>
+                  <div className='flex pt-2'>
+                    <CTAButton href='#contacto'>Ver demo de tableros</CTAButton>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -351,6 +437,10 @@ export default function Home() {
               </p>
             </div>
           </div>
+          <p className='pt-3 text-center text-[11px] text-slate/70 sm:text-left'>
+            Atención de médicos especialistas conforme a necesidades
+            particulares
+          </p>
         </Section>
 
         {/* Equipo */}

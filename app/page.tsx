@@ -26,7 +26,7 @@ export default function Home() {
               <div className='h-3 w-3 rounded-sm bg-sand' />
             </div>
             <div className='text-[11px] font-medium text-slate/70'>
-              Bienestar con evidencia • NOM-035/036-1/030 • ISO 45001/45003
+              Bienestar con evidencia • NOM-035/036/037
             </div>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function Home() {
             <Stat
               label='Cumplimiento normativo'
               value=''
-              hint='NOM-035/036-1/030 e ISO 45001/45003'
+              hint='NOM-035/036/037'
             />
             <Stat
               label='Retorno/Valor (ROI/VOI)'
